@@ -65,7 +65,7 @@ main {
   color: white;
   text-align: center;
 }
-.weather-box .temp {
+.temp {
   position: relative;
   display: inline-block;
   margin: 30px auto;
@@ -74,7 +74,20 @@ main {
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.2);
 }
+ .temp-fahr {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  font-size: 102px;
+  padding: 15px 25px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .weather-box .weather {
   font-size: 48px;
   
+}
+.display {
+  display: none;
 }
