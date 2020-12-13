@@ -33,7 +33,7 @@ const search = e => {
       "September",
       "October",
       "November",
-      "December",
+      "December"
     ];
     let days = [
       "Sunday",
@@ -46,7 +46,7 @@ const search = e => {
     ];
     let day = days[d.getDay()];
     let date = d.getDate();
-    let month = months[d.getDate()];
+    let month = months[d.getMonth()];
     let year = d.getFullYear();
     return `${day} ${date} ${month} ${year}`;
   };
