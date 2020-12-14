@@ -24,7 +24,7 @@ function App() {
 
   const Fahrenheit = (weather) => {
     console.log(weather);
-   return Math.round(weather.main.temp * 1.8 + 32);
+    return Math.round(weather.main.temp * 1.8 + 32);
   };
 
   const dateBuilder = (d) => {
@@ -94,10 +94,13 @@ function App() {
               <div className="date">{dateBuilder(new Date())}</div>
             </div>
             <div className="weather-box">
-              <div className={checked ? "temp display" : "temp"}>
-                {Math.round(weather.main.temp)} grad cel
-              </div>
-              <div className={checked ? "temp-fahr" : "temp-fahr display"}>{Fahrenheit(weather)} grad fahr</div>
+              {checked === true ? (
+                <div className="temp">{Fahrenheit(weather)} grad fahr</div>
+              ) : (
+                <div className="temp">
+                  {Math.round(weather.main.temp)} grad cel
+                </div>
+              )}
               <div className="weather">{weather.weather[0].main}</div>
             </div>
           </div>
